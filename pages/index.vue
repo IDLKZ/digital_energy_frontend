@@ -320,6 +320,7 @@
     </div>
     </section>
     <!-- Fifth Bloc    -->
+    <!-- Sixth Bloc    -->
     <section>
       <div class="container mx-auto my-[50px] py-[50px] rounded-2xl">
         <div class="grid grid-cols-12 gap-4">
@@ -376,8 +377,6 @@
                         </p>
                         <p class="text-2xl text-center">"</p><br>
                       </div>
-
-
                     </div>
 
                 </div>
@@ -388,6 +387,69 @@
         </div>
       </div>
     </section>
+    <!-- Sixth Bloc    -->
+    <!-- Seventh Bloc    -->
+    <section class="custom-gray-bg">
+      <div class="container mx-auto py-[20px] md:py-[100px] px-4">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12 px-4 md:col-span-12 text-center md:text-left">
+            <p class="text-3xl md:text-4xl text-black font-bold">
+              Члены ассоциаций
+            </p>
+            <span class="mt-2 mb-4 w-[10%] h-[8px] bg-[#01bcfb] inline-block"></span>
+          </div>
+        </div>
+        <div class="grid grid-cols-12 gap-4 my-[20px]">
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
+            <img src="~/assets/images/airbnb.png" class="w-full max-h-[30px]">
+          </div>
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
+            <img  src="~/assets/images/tesla.png" class="w-full max-h-[30px]">
+          </div>
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
+            <img src="~/assets/images/uber.png" class="w-full max-h-[30px]">
+          </div>
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
+            <img src="~/assets/images/netflix.png" class="w-full max-h-[30px]">
+          </div>
+        </div>
+        <div class="grid grid-cols-12 gap-4 my-[20px]">
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
+            <img src="~/assets/images/slack.png" class="w-full max-h-[30px]">
+          </div>
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
+            <img  src="~/assets/images/microsoft.png" class="w-full max-h-[30px]">
+          </div>
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
+            <img src="~/assets/images/mailchimp.png" class="w-full max-h-[30px]">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Seventh Bloc    -->
+    <!-- Seventh Bloc    -->
+    <section class="blue-gradient-button">
+      <div class="container mx-auto py-[20px] md:py-[100px] px-4">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12 px-4 md:col-span-4 text-center md:text-left">
+            <p class="text-3xl md:text-4xl text-white font-bold">
+              Заинтересованы?
+            </p>
+            <p class="text-3xl md:text-4xl text-white font-bold">
+              Свяжитесь с нами прямо сейчас!
+            </p>
+            <p class="text-md md:text-lg text-white mt-[40px]">
+              Чтобы связаться с нами, пожалуйста, заполните форму справа или напишите нам напрямую по адресу, указанному ниже.
+            </p>
+            <a class="text-md md:text-lg block text-white mt-[40px]">
+              info@energy.org.kz
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Seventh Bloc    -->
   </section>
 </template>
 
