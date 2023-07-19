@@ -1,6 +1,8 @@
 <template>
   <section>
+    <AppNavbar></AppNavbar>
     <Nuxt />
+    <AppFooter></AppFooter>
   </section>
 
 </template>

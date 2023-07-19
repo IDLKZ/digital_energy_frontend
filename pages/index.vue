@@ -5,10 +5,10 @@
       <div class="container mx-auto min-h-screen md:min-h-[80vh] flex items-center px-4">
         <div class="grid grid-cols-12 fle gap-4">
           <div class="col-span-12 md:col-span-6 text-center md:text-left">
-            <p class="text-5xl text-white font-bold">
+            <p class="text-3xl md:text-5xl text-white font-bold">
               Digital Energy
             </p>
-            <p class="mt-8 text-xl text-white">
+            <p class="mt-8 text-lg md:text-xl text-white">
               Мы будем укреплять наши ценности <br>
               трудолюбия и ответственности, уважения к<br>
               Человеку Труда, создавая условия для<br>
@@ -16,7 +16,7 @@
               каждого гражданина страны.<br>
             </p>
             <div class="py-8">
-              <button type="button" class="px-8 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100  rounded-lg font-bold text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+              <button type="button" class="px-8 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100  rounded-lg font-bold text-md md:text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
                 Связь с нами
               </button>
             </div>
@@ -35,9 +35,9 @@
             <p class="text-3xl md:text-4xl text-black font-bold">
               Об Ассоциации
             </p>
-            <span class="mt-2 mb-4 w-[10%] h-[8px] bg-[#01bcfb] inline-block"></span>
+            <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>
 
-            <p class="mt-4 pt-2 text-lg md:text-xl text-black" v-for="textAssociationItem of textAssociation">
+            <p class="mt-4 pt-2 text-md md:text-lg text-black" v-for="textAssociationItem of textAssociation">
               {{textAssociationItem}}
             </p>
 
@@ -56,7 +56,7 @@
                     class="
                     py-4
                     px-8
-                    flex items-end
+                    flex items-end justify-end
                     card rounded-2xl
                     min-h-[500px] max-w-[350px] w-[350px] h-[500px]
                     bg-no-repeat bg-center bg-cover
@@ -82,7 +82,7 @@
                     class="
                     py-4
                     px-8
-                    flex items-end
+                    flex items-end justify-end
                     card rounded-2xl
                     min-h-[500px] max-w-[350px] w-[350px] h-[500px]
                     bg-no-repeat bg-center bg-cover
@@ -118,7 +118,7 @@
             <p class="text-3xl md:text-4xl text-black font-bold">
               Ключевые задачи
             </p>
-            <span class="mt-2 mb-4 w-[10%] h-[8px] bg-[#01bcfb] inline-block"></span>
+            <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>
           </div>
         </div>
         <div class="grid grid-cols-12 gap-4 my-[50px]">
@@ -184,7 +184,7 @@
                     <p class="text-3xl md:text-4xl text-white font-bold">
                       Новости
                     </p>
-                    <span class="mt-2 mb-4 w-[10%] h-[8px] bg-[#01bcfb] inline-block"></span>
+                    <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>
                     <p class="text-2xl md:text-3xl text-white font-bold">
                       Зависящая от импорта электричества Литва рассчитывает на солидарность соседей
                     </p>
@@ -201,7 +201,7 @@
                     <p class="text-3xl md:text-4xl text-white font-bold">
                       Новости
                     </p>
-                    <span class="mt-2 mb-4 w-[10%] h-[8px] bg-[#01bcfb] inline-block"></span>
+                    <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>
                     <p class="text-2xl md:text-3xl text-white font-bold">
                       Зависящая от импорта электричества Литва рассчитывает на солидарность соседей
                     </p>
@@ -269,7 +269,7 @@
           <p class="text-3xl md:text-4xl text-white font-bold">
             Ключевые Цифры
           </p>
-          <span class="mt-2 mb-4 w-[10%] h-[8px] bg-[#01bcfb] inline-block"></span>
+          <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>
           <p class="text-md md:text-lg text-white my-5">
             Мы будем укреплять наши ценности трудолюбия и ответственности, уважения к Человеку Труда, создавая условия для реализации созидательного потенциала каждого гражданина страны.
           </p>
@@ -325,11 +325,12 @@
       <div class="container mx-auto my-[50px] py-[50px] rounded-2xl">
         <div class="grid grid-cols-12 gap-4">
           <div class="col-span-12 px-4 md:col-span-12 text-center md:text-left">
-          <ssr-carousel :slides-per-page='1' show-dots loop show-arrows>
+          <ssr-carousel :slides-per-page='1' show-arrows>
+
               <div class="slide">
-                <div class="flex justify-center">
-                <div class="py-5 blue-gradient-button min-h-[250px] w-full md:w-6/12 rounded-2xl flex justify-center items-center px-3">
-                    <div class="w-1/3 text-center">
+                <div class="flex justify-center chat chat-end">
+                <div class="py-5 blue-gradient-button min-h-[250px] w-full md:w-6/12 rounded-2xl md:flex justify-center items-center px-3 chat-bubble">
+                    <div class="md:w-1/3 text-center">
                       <div class="mx-auto rounded-full w-[100px] h-[100px] bg-no-repeat bg-center bg-cover bg-[url('~/assets/images/card_1.png')]"></div>
                       <p class=" text-white text-md text-center font-bold my-2">
                         Жанар Айманова
@@ -338,36 +339,7 @@
                         Директор
                       </p>
                     </div>
-                    <div class="w-2/3 text-white items-center flex items-center">
-                      <div>
-                        <p class="text-2xl mb-0">"</p>
-                        <p class="text-md text-white">
-                          Все достижения и успехи
-                          страны – результат каждодневного, кропотливого труда всех казахстанцев.
-                          Мы будем укреплять наши ценности трудолюбия и ответственности
-                        </p>
-                        <p class="text-2xl text-center">"</p><br>
-                      </div>
-
-
-                    </div>
-
-                </div>
-              </div>
-              </div>
-              <div class="slide">
-                <div class="flex justify-center">
-                <div class="py-5 blue-gradient-button min-h-[250px] w-full md:w-6/12 rounded-2xl flex justify-center items-center px-3">
-                    <div class="w-1/3 text-center">
-                      <div class="mx-auto rounded-full w-[100px] h-[100px] bg-no-repeat bg-center bg-cover bg-[url('~/assets/images/card_1.png')]"></div>
-                      <p class=" text-white text-md text-center font-bold my-2">
-                        Жанар Айманова
-                      </p>
-                      <p class=" text-white text-md text-xs text-center">
-                        Директор
-                      </p>
-                    </div>
-                    <div class="w-2/3 text-white items-center flex items-center">
+                    <div class="md:w-2/3 text-white items-center flex items-center">
                       <div>
                         <p class="text-2xl mb-0">"</p>
                         <p class="text-md text-white">
@@ -382,6 +354,34 @@
                 </div>
               </div>
               </div>
+              <div class="slide">
+                <div class="flex justify-center chat chat-end">
+                <div class="py-5 blue-gradient-button min-h-[250px] w-full md:w-6/12 rounded-2xl md:flex justify-center items-center px-3 chat-bubble">
+                    <div class="md:w-1/3 text-center">
+                      <div class="mx-auto rounded-full w-[100px] h-[100px] bg-no-repeat bg-center bg-cover bg-[url('~/assets/images/card_1.png')]"></div>
+                      <p class=" text-white text-md text-center font-bold my-2">
+                        Жанар Айманова
+                      </p>
+                      <p class=" text-white text-md text-xs text-center">
+                        Директор
+                      </p>
+                    </div>
+                    <div class="md:w-2/3 text-white items-center flex items-center">
+                      <div>
+                        <p class="text-2xl mb-0">"</p>
+                        <p class="text-md text-white">
+                          Все достижения и успехи
+                          страны – результат каждодневного, кропотливого труда всех казахстанцев.
+                          Мы будем укреплять наши ценности трудолюбия и ответственности
+                        </p>
+                        <p class="text-2xl text-center">"</p><br>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+              </div>
+
           </ssr-carousel>
           </div>
         </div>
@@ -396,32 +396,32 @@
             <p class="text-3xl md:text-4xl text-black font-bold">
               Члены ассоциаций
             </p>
-            <span class="mt-2 mb-4 w-[10%] h-[8px] bg-[#01bcfb] inline-block"></span>
+            <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>
           </div>
         </div>
-        <div class="grid grid-cols-12 gap-4 my-[20px]">
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
-            <img src="~/assets/images/airbnb.png" class="w-full max-h-[30px]">
+        <div class="grid grid-cols-12 gap-4 my-[40px] flex align-items-center">
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
+            <img src="~/assets/images/airbnb.png" class="max-h-[30px]">
           </div>
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
-            <img  src="~/assets/images/tesla.png" class="w-full max-h-[30px]">
+          <div class="col-span-12 md:col-span-2 px-4 text-center md:text-left flex justify-center items-center my-3">
+            <img  src="~/assets/images/tesla.png" class="max-h-[30px]">
           </div>
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
-            <img src="~/assets/images/uber.png" class="w-full max-h-[30px]">
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
+            <img src="~/assets/images/uber.png" class="max-h-[30px]">
           </div>
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
-            <img src="~/assets/images/netflix.png" class="w-full max-h-[30px]">
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
+            <img src="~/assets/images/netflix.png" class="max-h-[30px]">
           </div>
         </div>
-        <div class="grid grid-cols-12 gap-4 my-[20px]">
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
-            <img src="~/assets/images/slack.png" class="w-full max-h-[30px]">
+        <div class="grid grid-cols-12 gap-4 my-[40px]">
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
+            <img src="~/assets/images/slack.png" class="max-h-[30px]">
           </div>
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
-            <img  src="~/assets/images/microsoft.png" class="w-full max-h-[30px]">
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
+            <img  src="~/assets/images/microsoft.png" class="max-h-[30px]">
           </div>
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left">
-            <img src="~/assets/images/mailchimp.png" class="w-full max-h-[30px]">
+          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
+            <img src="~/assets/images/mailchimp.png" class="max-h-[30px]">
           </div>
         </div>
       </div>
@@ -431,25 +431,72 @@
     <section class="blue-gradient-button">
       <div class="container mx-auto py-[20px] md:py-[100px] px-4">
         <div class="grid grid-cols-12 gap-4">
-          <div class="col-span-12 px-4 md:col-span-4 text-center md:text-left">
-            <p class="text-3xl md:text-4xl text-white font-bold">
+          <div class="col-span-12 px-4 md:col-span-6 text-center md:text-left my-4">
+            <p class="text-xl md:text-4xl text-white">
               Заинтересованы?
             </p>
-            <p class="text-3xl md:text-4xl text-white font-bold">
+            <p class="text-xl md:text-4xl text-white">
               Свяжитесь с нами прямо сейчас!
             </p>
             <p class="text-md md:text-lg text-white mt-[40px]">
-              Чтобы связаться с нами, пожалуйста, заполните форму справа или напишите нам напрямую по адресу, указанному ниже.
+              Чтобы связаться с нами, пожалуйста,<br> заполните форму справа или<br> напишите нам напрямую по адресу,<br> указанному ниже.
             </p>
             <a class="text-md md:text-lg block text-white mt-[40px]">
               info@energy.org.kz
             </a>
+          </div>
+          <div class="col-span-12 px-4 md:col-span-6 text-center md:text-left my-4">
+            <div class="md:flex">
+              <input type="text" placeholder="Имя" class="input input-bordered w-full md:w-1/2  my-2 mx-2" />
+              <input type="text" placeholder="Фамилия" class="input input-bordered w-full md:w-1/2 my-2 mx-2" />
+            </div>
+            <div class="md:flex">
+            <input type="email" placeholder="Email" class="input input-bordered w-full my-2 mx-2" />
+            </div>
+            <div class="md:flex">
+            <input type="email" placeholder="Название вашей компании" class="input input-bordered w-full my-2 mx-2" />
+            </div>
+            <div class="md:flex">
+            <textarea class="textarea textarea-bordered w-full my-2 mx-2" placeholder="Сообщение"></textarea>
+            </div>
+            <div class="py-8">
+              <button type="button" class="px-8 text-black bg-white border  rounded-lg font-bold text-md px-5 py-2.5 mr-2 mb-2">
+                Отправить
+              </button>
+            </div>
+
           </div>
         </div>
 
       </div>
     </section>
     <!-- Seventh Bloc    -->
+    <!-- Eight Bloc    -->
+    <section class="bg-[#092A44]">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12 px-4 md:col-span-8 text-center md:text-left my-4 py-[20px]">
+            <div class="flex items-center">
+              <p class="text-md md:text-lg text-white font-bold">
+                Подпишитесь на нашу еженедельную <br>
+                новостную рассылку
+              </p>
+            </div>
+
+          </div>
+          <div class="col-span-12 px-4 md:col-span-4 text-center md:text-left my-4">
+            <div class="flex items-center h-full">
+              <div class="relative w-full">
+                <input type="search" id="search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email" required>
+                <button type="submit" class="text-white absolute right-2.5 bottom-2.5  bg-[#01BCFB] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Подписаться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Eight Bloc    -->
   </section>
 </template>
 
