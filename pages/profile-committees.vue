@@ -7,110 +7,76 @@
       </h2>
 
       <div class="lg:gap-xl-12 grid gap-x-6 md:grid-cols-3 xl:grid-cols-4">
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-
-          <p class="mb-2 font-bold">John Doe</p>
-          <p class="text-neutral-500 dark:text-neutral-300">Co-founder</p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/5.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-
-          <p class="mb-2 font-bold">Lisa Ferrol</p>
-          <p class="text-neutral-500 dark:text-neutral-300">Web designer</p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/6.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Maria Smith</p>
-          <p class="text-neutral-500 dark:text-neutral-300">
-            Senior consultant
-          </p>
-        </div>
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/7.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Agatha Bevos</p>
-          <p class="text-neutral-500 dark:text-neutral-300">Co-founder</p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Darren Randolph</p>
-          <p class="text-neutral-500 dark:text-neutral-300">
-            Marketing expert
-          </p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/9.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Soraya Letto</p>
-          <p class="text-neutral-500 dark:text-neutral-300">SEO expert</p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/10.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Maliha Welch</p>
-          <p class="text-neutral-500 dark:text-neutral-300">Web designer</p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/11.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Zeynep Dudley</p>
-          <p class="text-neutral-500 dark:text-neutral-300">Web developer</p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/12.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Avaya Hills</p>
-          <p class="text-neutral-500 dark:text-neutral-300">Copywritter</p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/13.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Thierry Fischer</p>
-          <p class="text-neutral-500 dark:text-neutral-300">
-            Senior consultant
-          </p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/14.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Aisling Sheldon</p>
-          <p class="text-neutral-500 dark:text-neutral-300">
-            Senior developer
-          </p>
-        </div>
-
-        <div class="mb-12">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/15.jpg"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
-          <p class="mb-2 font-bold">Ayat Black</p>
-          <p class="text-neutral-500 dark:text-neutral-300">Web designer</p>
+        <div v-for="item in teams" class="mb-6 lg:mb-0">
+          <div
+            class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <!--                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/6.jpg" class="w-full rounded-t-lg" />-->
+              <div class="bg-img" :style="{ 'background-image' : 'url('+getImageUrl(item.imageUrl)+')' }"></div>
+              <a href="#!">
+                <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"></div>
+              </a>
+              <svg class="absolute text-white dark:text-neutral-700 left-0 bottom-0" xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 1440 320">
+                <path fill="currentColor"
+                      d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+              </svg>
+            </div>
+            <div class="p-6">
+              <h5 class="mb-4 text-lg font-bold">{{item.name}}</h5>
+              <p class="mb-4 text-neutral-500 dark:text-neutral-300">Председатель Попечительского совета, со-основатель Ассоциации</p>
+              <a href="#!" class="px-2">
+                <!-- GitHub -->
+                Подробнее
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- Section: Design Block -->
+
   </div>
 </template>
 
 <script>
 export default {
-  name: "profile-committees"
+  name: "profile-committees",
+  data() {
+    return {
+      teams: [
+        {
+          id: 1,
+          name: 'Куралай Акатова',
+          job: 'Руководитель организационного комитета',
+          description: '',
+          imageUrl: 'kuralai.png'
+        },
+        {
+          id: 2,
+          name: 'Тимур Турсынбаев',
+          job: 'Руководитель Комитета развития архитектуры Smart Grid',
+          description: '',
+          imageUrl: 'timur.png'
+        },
+      ]
+    }
+  },
+  methods: {
+    getImageUrl(url) {
+      return require(`@/assets/images/profiles/${url}`)
+    }
+  }
 }
 </script>
 
 <style scoped>
-
+.bg-img {
+  background-size: cover!important;
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+}
 </style>
