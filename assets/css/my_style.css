@@ -13,11 +13,29 @@ body{
 .custom-gray-bg{
     background: #F2F2F2;
 }
+.custom-white-bg {
+  background: white;
+}
+.custom-dark-bg {
+  background: #2a2a2a;
+}
 .blue-gradient-button{
-    background: linear-gradient(90deg, rgba(3,189,247,1) 5%, rgba(31,208,189,1) 52%);
+    background: linear-gradient(90deg, rgba(3,189,247,1) 5%, rgba(31,208,189,1) 52%)!important;
 }
 .darken-slide-bg{
   background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("~/assets/images/slide_bg_1.png")  no-repeat center center;
   background-size: cover;
+}
+
+
+
+@media only screen and (max-width: 1919px) {
+
+}
+
+@media only screen and (max-width: 760px) {
+  .mob-pt-80 {
+    padding-top: 80px;
+  }
 }
 

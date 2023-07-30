@@ -2,8 +2,8 @@
   <section class="fixed w-full z-20" :style="{ 'background': !view.topOfPage ? '#0C3759' : 'transparent'}">
   <div class="container-full navbar bg-transparent">
     <div class="container mx-auto">
-    <div class="navbar">
-      <div class="navbar-start">
+    <div class="navbar justify-between">
+      <div class="">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -17,17 +17,24 @@
             <li><a class="text-black text-md">Эксперты</a></li>
           </ul>
         </div>
-        <a href=""><img src="~/assets/images/nav_logo.png" class="w-full md:w-full"></a>
+        <NuxtLink to="/"><img src="~/assets/images/nav_logo.png" class="w-full md:w-full"></NuxtLink>
       </div>
-      <div class="navbar-end">
+      <div class="">
         <div class="hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-          <li><a class="text-white text-md">Новости</a></li>
-          <li><a class="text-white text-md">О Нас</a></li>
-          <li><a class="text-white text-md">Наша команда</a></li>
-          <li><a class="text-white text-md">Проекты</a></li>
-          <li><a class="text-white text-md">Иницитивы</a></li>
-          <li><a class="text-white text-md">Эксперты</a></li>
+          <li><NuxtLink to="/news" class="text-white text-md">Новости</NuxtLink></li>
+          <li><NuxtLink to="/about-us" class="text-white text-md">О Нас</NuxtLink></li>
+          <li><NuxtLink to="/teams" class="text-white text-md">Наша команда</NuxtLink></li>
+          <li><NuxtLink to="/associations" class="text-white text-md">Члены ассоциации</NuxtLink></li>
+          <li class="dr-id relative">
+            <a class="text-white text-md">Индустрия 4.0</a>
+            <ul class="dr-content">
+              <li><NuxtLink to="/about-consortium" class="text-white text-md">О консорциуме</NuxtLink></li>
+              <li><NuxtLink to="/profile-committees" class="text-white text-md">Профильные комитеты </NuxtLink></li>
+              <li><a class="text-white text-md" href="">Эксперты </a></li>
+            </ul>
+          </li>
+          <li><NuxtLink to="/contact" class="text-white text-md">Контакты</NuxtLink></li>
         </ul>
         </div>
         <a class="btn text-white bg-transparent border border-white">Войти</a>
@@ -65,4 +72,13 @@ export default {
 
 <style scoped>
 
+  .dr-content {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 0;
+  }
+  .dr-id:hover .dr-content {
+    display: block;
+  }
 </style>

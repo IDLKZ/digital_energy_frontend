@@ -15,11 +15,11 @@
               реализации созидательного потенциала <br>
               каждого гражданина страны.<br>
             </p>
-            <div class="py-8">
-              <button type="button" class="px-8 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100  rounded-lg font-bold text-md md:text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
-                Связь с нами
-              </button>
-            </div>
+<!--            <div class="py-8">-->
+<!--              <button type="button" class="px-8 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100  rounded-lg font-bold text-md md:text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">-->
+<!--                Связь с нами-->
+<!--              </button>-->
+<!--            </div>-->
 
           </div>
         </div>
@@ -43,9 +43,9 @@
 
 
             <div class="py-8">
-              <button type="button" class="blue-gradient-button px-8 text-white bg-white border   rounded-lg font-bold text-lg px-5 py-2.5 mr-2 mb-2">
+              <NuxtLink to="/about-us" type="button" class="blue-gradient-button px-8 text-white bg-white border rounded-lg font-bold text-lg px-5 py-2.5 mr-2 mb-2">
                 Подробнее о нас
-              </button>
+              </NuxtLink>
             </div>
           </div>
           <div class="col-span-12 md:col-span-5">
@@ -111,7 +111,7 @@
     <!-- Second Bloc-->
 
     <!--    Third bloc-->
-    <section>
+    <section class="custom-white-bg">
       <div class="container mx-auto py-[20px] md:py-[100px] px-4">
         <div class="grid grid-cols-12 gap-4">
           <div class="col-span-12 px-4 md:col-span-12 text-center md:text-left">
@@ -124,7 +124,7 @@
         <div class="grid grid-cols-12 gap-4 my-[50px]">
           <div class="col-span-12 px-4 md:col-span-6 text-center md:text-left">
             <p class="text-2xl md:text-3xl text-black font-bold text-[#01bcfb]">
-              1 задача
+              01 задача
             </p>
             <p class="text-xl md:text-2xl text-black font-bold my-[10px]">
               Представление и защита интересов членов Ассоциации.
@@ -143,7 +143,7 @@
           </div>
           <div class="col-span-12 px-4 md:col-span-6 text-center md:text-left">
             <p class="text-2xl md:text-3xl text-black font-bold text-[#01bcfb]">
-              2 задача
+              02 задача
             </p>
             <p class="text-xl md:text-2xl text-black font-bold my-[10px]">
               Улучшение регуляторной среды для технологического развития
@@ -156,7 +156,7 @@
         <div class="grid grid-cols-12 gap-4 my-[50px]">
           <div class="col-span-12 px-4 md:col-span-6 text-center md:text-left">
             <p class="text-2xl md:text-3xl text-black font-bold text-[#01bcfb]">
-              3 задача
+              03 задача
             </p>
             <p class="text-xl md:text-2xl text-black font-bold my-[10px]">
               Развитие отраслевой компетенции в передовых технологиях.
@@ -401,101 +401,101 @@
         </div>
         <div class="grid grid-cols-12 gap-4 my-[40px] flex align-items-center">
           <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <img src="~/assets/images/airbnb.png" class="max-h-[30px]">
+            <a href="https://ru.airbnb.com/" target="_blank"><img src="~/assets/images/airbnb.png" class="max-h-[30px]"></a>
           </div>
           <div class="col-span-12 md:col-span-2 px-4 text-center md:text-left flex justify-center items-center my-3">
-            <img  src="~/assets/images/tesla.png" class="max-h-[30px]">
+            <a href="https://www.tesla.com/" target="_blank"><img  src="~/assets/images/tesla.png" class="max-h-[30px]"></a>
           </div>
           <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <img src="~/assets/images/uber.png" class="max-h-[30px]">
+            <a href="https://www.uber.com/nl/nl/" target="_blank"><img src="~/assets/images/uber.png" class="max-h-[30px]"></a>
           </div>
           <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <img src="~/assets/images/netflix.png" class="max-h-[30px]">
+            <a href="https://www.netflix.com/nl-en/" target="_blank"><img src="~/assets/images/netflix.png" class="max-h-[30px]"></a>
           </div>
         </div>
         <div class="grid grid-cols-12 gap-4 my-[40px]">
           <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <img src="~/assets/images/slack.png" class="max-h-[30px]">
+            <a href="https://slack.com/" target="_blank"><img src="~/assets/images/slack.png" class="max-h-[30px]"></a>
           </div>
           <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <img  src="~/assets/images/microsoft.png" class="max-h-[30px]">
+            <a href="https://www.microsoft.com/nl-nl/" target="_blank"><img src="~/assets/images/microsoft.png" class="max-h-[30px]"></a>
           </div>
           <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <img src="~/assets/images/mailchimp.png" class="max-h-[30px]">
+            <a href="https://mailchimp.com/" target="_blank"><img src="~/assets/images/mailchimp.png" class="max-h-[30px]"></a>
           </div>
         </div>
       </div>
     </section>
     <!-- Seventh Bloc    -->
     <!-- Seventh Bloc    -->
-    <section class="blue-gradient-button">
-      <div class="container mx-auto py-[20px] md:py-[100px] px-4">
-        <div class="grid grid-cols-12 gap-4">
-          <div class="col-span-12 px-4 md:col-span-6 text-center md:text-left my-4">
-            <p class="text-xl md:text-4xl text-white">
-              Заинтересованы?
-            </p>
-            <p class="text-xl md:text-4xl text-white">
-              Свяжитесь с нами прямо сейчас!
-            </p>
-            <p class="text-md md:text-lg text-white mt-[40px]">
-              Чтобы связаться с нами, пожалуйста,<br> заполните форму справа или<br> напишите нам напрямую по адресу,<br> указанному ниже.
-            </p>
-            <a class="text-md md:text-lg block text-white mt-[40px]">
-              info@energy.org.kz
-            </a>
-          </div>
-          <div class="col-span-12 px-4 md:col-span-6 text-center md:text-left my-4">
-            <div class="md:flex">
-              <input type="text" placeholder="Имя" class="input input-bordered w-full md:w-1/2  my-2 mx-2" />
-              <input type="text" placeholder="Фамилия" class="input input-bordered w-full md:w-1/2 my-2 mx-2" />
-            </div>
-            <div class="md:flex">
-            <input type="email" placeholder="Email" class="input input-bordered w-full my-2 mx-2" />
-            </div>
-            <div class="md:flex">
-            <input type="email" placeholder="Название вашей компании" class="input input-bordered w-full my-2 mx-2" />
-            </div>
-            <div class="md:flex">
-            <textarea class="textarea textarea-bordered w-full my-2 mx-2" placeholder="Сообщение"></textarea>
-            </div>
-            <div class="py-8">
-              <button type="button" class="px-8 text-black bg-white border  rounded-lg font-bold text-md px-5 py-2.5 mr-2 mb-2">
-                Отправить
-              </button>
-            </div>
+<!--    <section class="blue-gradient-button">-->
+<!--      <div class="container mx-auto py-[20px] md:py-[100px] px-4">-->
+<!--        <div class="grid grid-cols-12 gap-4">-->
+<!--          <div class="col-span-12 px-4 md:col-span-6 text-center md:text-left my-4">-->
+<!--            <p class="text-xl md:text-4xl text-white">-->
+<!--              Заинтересованы?-->
+<!--            </p>-->
+<!--            <p class="text-xl md:text-4xl text-white">-->
+<!--              Свяжитесь с нами прямо сейчас!-->
+<!--            </p>-->
+<!--            <p class="text-md md:text-lg text-white mt-[40px]">-->
+<!--              Чтобы связаться с нами, пожалуйста,<br> заполните форму справа или<br> напишите нам напрямую по адресу,<br> указанному ниже.-->
+<!--            </p>-->
+<!--            <a class="text-md md:text-lg block text-white mt-[40px]">-->
+<!--              info@energy.org.kz-->
+<!--            </a>-->
+<!--          </div>-->
+<!--          <div class="col-span-12 px-4 md:col-span-6 text-center md:text-left my-4">-->
+<!--            <div class="md:flex">-->
+<!--              <input type="text" placeholder="Имя" class="input input-bordered w-full md:w-1/2  my-2 mx-2" />-->
+<!--              <input type="text" placeholder="Фамилия" class="input input-bordered w-full md:w-1/2 my-2 mx-2" />-->
+<!--            </div>-->
+<!--            <div class="md:flex">-->
+<!--            <input type="email" placeholder="Email" class="input input-bordered w-full my-2 mx-2" />-->
+<!--            </div>-->
+<!--            <div class="md:flex">-->
+<!--            <input type="email" placeholder="Название вашей компании" class="input input-bordered w-full my-2 mx-2" />-->
+<!--            </div>-->
+<!--            <div class="md:flex">-->
+<!--            <textarea class="textarea textarea-bordered w-full my-2 mx-2" placeholder="Сообщение"></textarea>-->
+<!--            </div>-->
+<!--            <div class="py-8">-->
+<!--              <button type="button" class="px-8 text-black bg-white border  rounded-lg font-bold text-md px-5 py-2.5 mr-2 mb-2">-->
+<!--                Отправить-->
+<!--              </button>-->
+<!--            </div>-->
 
-          </div>
-        </div>
+<!--          </div>-->
+<!--        </div>-->
 
-      </div>
-    </section>
+<!--      </div>-->
+<!--    </section>-->
     <!-- Seventh Bloc    -->
     <!-- Eight Bloc    -->
-    <section class="bg-[#092A44]">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-12 gap-4">
-          <div class="col-span-12 px-4 md:col-span-8 text-center md:text-left my-4 py-[20px]">
-            <div class="flex items-center">
-              <p class="text-md md:text-lg text-white font-bold">
-                Подпишитесь на нашу еженедельную <br>
-                новостную рассылку
-              </p>
-            </div>
+<!--    <section class="bg-[#092A44]">-->
+<!--      <div class="container mx-auto px-4">-->
+<!--        <div class="grid grid-cols-12 gap-4">-->
+<!--          <div class="col-span-12 px-4 md:col-span-8 text-center md:text-left my-4 py-[20px]">-->
+<!--            <div class="flex items-center">-->
+<!--              <p class="text-md md:text-lg text-white font-bold">-->
+<!--                Подпишитесь на нашу еженедельную <br>-->
+<!--                новостную рассылку-->
+<!--              </p>-->
+<!--            </div>-->
 
-          </div>
-          <div class="col-span-12 px-4 md:col-span-4 text-center md:text-left my-4">
-            <div class="flex items-center h-full">
-              <div class="relative w-full">
-                <input type="search" id="search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email" required>
-                <button type="submit" class="text-white absolute right-2.5 bottom-2.5  bg-[#01BCFB] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Подписаться</button>
-              </div>
-            </div>
-          </div>
-        </div>
+<!--          </div>-->
+<!--          <div class="col-span-12 px-4 md:col-span-4 text-center md:text-left my-4">-->
+<!--            <div class="flex items-center h-full">-->
+<!--              <div class="relative w-full">-->
+<!--                <input type="search" id="search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email" required>-->
+<!--                <button type="submit" class="text-white absolute right-2.5 bottom-2.5  bg-[#01BCFB] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Подписаться</button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
 
-      </div>
-    </section>
+<!--      </div>-->
+<!--    </section>-->
     <!-- Eight Bloc    -->
   </section>
 </template>
