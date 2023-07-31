@@ -31,7 +31,7 @@
             <ul class="dr-content">
               <li><NuxtLink to="/about-consortium" class="text-white text-md">О консорциуме</NuxtLink></li>
               <li><NuxtLink to="/profile-committees" class="text-white text-md">Профильные комитеты </NuxtLink></li>
-              <li><a class="text-white text-md" href="">Эксперты </a></li>
+              <li><NuxtLink to="/experts" class="text-white text-md">Эксперты </NuxtLink></li>
             </ul>
           </li>
           <li><NuxtLink to="/contact" class="text-white text-md">Контакты</NuxtLink></li>

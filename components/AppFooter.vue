@@ -22,9 +22,6 @@
               <NuxtLink to="/associations" class="text-white hover:underline">Члены ассоциации</NuxtLink>
             </li>
             <li class="mb-4">
-              <NuxtLink to="#" class="text-white hover:underline">Индустрия 4.0</NuxtLink>
-            </li>
-            <li class="mb-4">
               <NuxtLink to="/contact" class="text-white hover:underline">Контакты</NuxtLink>
             </li>
           </ul>

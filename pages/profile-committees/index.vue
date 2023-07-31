@@ -7,15 +7,15 @@
       </h2>
 
       <div class="lg:gap-xl-12 grid gap-x-6 md:grid-cols-3 xl:grid-cols-4">
-        <div v-for="item in teams" class="mb-6 lg:mb-0">
+        <div v-for="item in teams.data" class="mb-6 lg:mb-3">
           <div
             class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div class="relative overflow-hidden bg-cover bg-no-repeat">
               <!--                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/6.jpg" class="w-full rounded-t-lg" />-->
-              <div class="bg-img" :style="{ 'background-image' : 'url('+getImageUrl(item.imageUrl)+')' }"></div>
-              <a href="#!">
+              <div class="bg-img" :style="{ 'background-image' : 'url('+getImageUrlFromBack(item.attributes.image.data.attributes.url)+')' }"></div>
+              <NuxtLink :to="`/profile-committees/${item.id}`">
                 <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"></div>
-              </a>
+              </NuxtLink>
               <svg class="absolute text-white dark:text-neutral-700 left-0 bottom-0" xmlns="http://www.w3.org/2000/svg"
                    viewBox="0 0 1440 320">
                 <path fill="currentColor"
@@ -24,12 +24,12 @@
               </svg>
             </div>
             <div class="p-6">
-              <h5 class="mb-4 text-lg font-bold">{{item.name}}</h5>
-              <p class="mb-4 text-neutral-500 dark:text-neutral-300">Председатель Попечительского совета, со-основатель Ассоциации</p>
-              <a href="#!" class="px-2">
+              <h5 class="mb-4 text-lg font-bold">{{item.attributes.name}}</h5>
+              <p class="mb-4 text-neutral-500 dark:text-neutral-300">{{item.attributes.position}}</p>
+              <NuxtLink :to="`/profile-committees/${item.id}`" class="px-2">
                 <!-- GitHub -->
                 Подробнее
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -42,30 +42,22 @@
 
 <script>
 export default {
-  name: "profile-committees",
+  name: "index",
   data() {
     return {
-      teams: [
-        {
-          id: 1,
-          name: 'Куралай Акатова',
-          job: 'Руководитель организационного комитета',
-          description: '',
-          imageUrl: 'kuralai.png'
-        },
-        {
-          id: 2,
-          name: 'Тимур Турсынбаев',
-          job: 'Руководитель Комитета развития архитектуры Smart Grid',
-          description: '',
-          imageUrl: 'timur.png'
-        },
-      ]
+
     }
+  },
+  async asyncData({ $axios }) {
+    const teams = await $axios.$get(`http://localhost:1337/api/profilnye-komiteties?populate=*`)
+    return { teams }
   },
   methods: {
     getImageUrl(url) {
       return require(`@/assets/images/profiles/${url}`)
+    },
+    getImageUrlFromBack(url) {
+      return "http://localhost:1337"+url;
     }
   }
 }
