@@ -18,7 +18,7 @@
             </NuxtLink>
           </div>
 
-          <h5 class="mb-3 text-lg font-bold">{{blog.attributes.title}}</h5>
+          <h5 class="mb-3 text-lg font-bold text-white">{{blog.attributes.title}}</h5>
           <div class="mb-3 flex items-center justify-center text-sm font-medium text-danger dark:text-danger-500">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                  stroke="currentColor" class="mr-2 h-5 w-5">
@@ -30,48 +30,15 @@
 
       </div>
       <div>
-        <nav aria-label="Page navigation example">
-          <ul class="list-style-none flex">
-            <li>
-              <a
-                class="pointer-events-none relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-neutral-400"
-              >Пред</a
-              >
-            </li>
-            <li>
-              <a
-                class="relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100  dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-                href="#!"
-              >1</a
-              >
-            </li>
-            <li aria-current="page">
-              <a
-                class="relative block rounded-full bg-primary-100 px-3 py-1.5 text-sm font-medium text-primary-700 transition-all duration-300"
-                href="#!"
-              >2
-                <span
-                  class="absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0 [clip:rect(0,0,0,0)]"
-                >(current)</span
-                >
-              </a>
-            </li>
-            <li>
-              <a
-                class="relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-                href="#!"
-              >3</a
-              >
-            </li>
-            <li>
-              <a
-                class="relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-                href="#!"
-              >След</a
-              >
-            </li>
-          </ul>
-        </nav>
+        <Paginate
+          :page-count="this.blogs.meta.pagination.pageCount"
+          :click-handler="callBack"
+          :prev-text="'Пред'"
+          :next-text="'След'"
+          :container-class="'list-style-none flex'"
+          :page-class="'mx-3'"
+          :page-link-class="'relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100  dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white'">
+        </Paginate>
       </div>
     </section>
     <!-- Section: Design Block -->
@@ -80,27 +47,39 @@
 
 <script>
 import constants from "~/helpers/constants";
-
+import Paginate from "vuejs-paginate";
 export default {
   name: "index",
+  components: {
+    Paginate
+  },
   data() {
     return {
       blogs: []
     }
   },
-  // async asyncData({$axios}) {
-  //   const blogs = await $axios.$get(constants.baseApiUrl+'/blogs?populate=*')
-  //   return { blogs }
-  // },
+  async asyncData({$axios}) {
+    const blogs = await $axios.$get(constants.baseApiUrl+'/blogs?populate=*&pagination[page]=1&pagination[pageSize]=10')
+    return { blogs }
+  },
   methods: {
     async getItems() {
-      this.blogs = await this.$axios.$get(constants.baseApiUrl+'/blogs?populate=*&pagination[page]=1&pagination[pageSize]=1')
+      await this.$axios.$get(constants.baseApiUrl+'/blogs?populate=*&pagination[page]=1&pagination[pageSize]=10')
+        .then(res => {
+          this.blogs = res
+        })
     },
     getImageUrlFromBack(url) {
       return constants.baseUrl+url;
+    },
+    async callBack(pageNum) {
+      await this.$axios.$get(constants.baseApiUrl+`/blogs?populate=*&pagination[page]=${pageNum}&pagination[pageSize]=1`)
+        .then(res => {
+          this.blogs = res
+        })
     }
   },
-  mounted() {
+  created() {
     this.getItems()
   }
 }

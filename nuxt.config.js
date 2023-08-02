@@ -42,7 +42,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    'vue-ssr-carousel/nuxt'
+    'vue-ssr-carousel/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
