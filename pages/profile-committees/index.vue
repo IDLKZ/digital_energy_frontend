@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import constants from "~/helpers/constants";
 export default {
   name: "index",
   data() {
@@ -49,7 +50,7 @@ export default {
     }
   },
   async asyncData({ $axios }) {
-    const teams = await $axios.$get(`http://localhost:1337/api/profilnye-komiteties?populate=*`)
+    const teams = await $axios.$get(constants.baseApiUrl+'/profilnye-komiteties?populate=*')
     return { teams }
   },
   methods: {
@@ -57,7 +58,7 @@ export default {
       return require(`@/assets/images/profiles/${url}`)
     },
     getImageUrlFromBack(url) {
-      return "http://localhost:1337"+url;
+      return constants.baseUrl+url;
     }
   }
 }

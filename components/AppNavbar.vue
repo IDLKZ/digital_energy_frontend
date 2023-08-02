@@ -1,5 +1,6 @@
 <template>
-  <section class="fixed w-full z-20" :style="{ 'background': !view.topOfPage ? '#0C3759' : 'transparent'}">
+<!--  <section class="fixed w-full z-20" :style="{ 'background': !view.topOfPage ? '#0C3759' : 'transparent'}">-->
+  <section class="fixed w-full z-20" style="background: #0C3759">
   <div class="container-full navbar bg-transparent">
     <div class="container mx-auto">
     <div class="navbar justify-between">

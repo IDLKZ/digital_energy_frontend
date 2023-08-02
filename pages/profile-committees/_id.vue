@@ -33,7 +33,7 @@
   import constants from "~/helpers/constants";
   export default {
     async asyncData ({params, $axios}) {
-      const user = await $axios.$get(constants.baseApiUrl+`/api/profilnye-komiteties/${params.id}?populate=*`)
+      const user = await $axios.$get(constants.baseApiUrl+`/profilnye-komiteties/${params.id}?populate=*`)
       return { user }
     },
     methods: {
