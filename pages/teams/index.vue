@@ -5,7 +5,7 @@
       <!-- Section: Design Block -->
       <section class="mb-32 text-center">
         <h2 class="mb-12 text-3xl font-bold">
-          Наша <u class="text-primary dark:text-primary-400">команда</u>
+          Наша команда<u class="text-primary dark:text-primary-400"></u>
         </h2>
 
         <div class="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">

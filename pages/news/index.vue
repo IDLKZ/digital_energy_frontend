@@ -10,7 +10,8 @@
         <div v-for="blog in blogs.data" class="mb-6 lg:mb-0">
           <div class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
                data-te-ripple-init data-te-ripple-color="light">
-            <img :src="getImageUrlFromBack(blog.attributes.images.data[0].attributes.url)" class="w-full" alt="Louvre" />
+<!--            <img :src="getImageUrlFromBack(blog.attributes.images.data[0].attributes.url)" class="w-full" alt="Louvre" />-->
+            <div :style="{ 'background-image' : 'url('+ getImageUrlFromBack(blog.attributes.images.data[0].attributes.url)+')' }" class="w-full bg-img" alt="Louvre" />
             <NuxtLink :to="`/news/${blog.id}`">
               <div
                 class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]">
@@ -86,5 +87,11 @@ export default {
 </script>
 
 <style scoped>
-
+  .bg-img {
+    background-size: cover!important;
+    width: 100%;
+    height: 320px;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+  }
 </style>

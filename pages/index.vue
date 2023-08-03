@@ -69,9 +69,9 @@
                       <p class="text-md text-white  my-2">
                         Все достижения и успехи страны – результат каждодневного, кропотливого труда всех казахстанцев.
                       </p>
-                      <a href="" class="text-lg text-white font-bold my-2">
+                      <NuxtLink to="/about-us" class="text-lg text-white font-bold my-2">
                         Подробнее >
-                      </a>
+                      </NuxtLink>
                     </div>
                   </div>
                 </div>
@@ -95,9 +95,9 @@
                       <p class="text-md text-black  my-2">
                         Все достижения и успехи страны – результат каждодневного, кропотливого труда всех казахстанцев.
                       </p>
-                      <a href="" class="text-lg text-black font-bold my-2">
+                      <NuxtLink to="/about-us" class="text-lg text-black font-bold my-2">
                         Подробнее >
-                      </a>
+                      </NuxtLink>
                     </div>
                   </div>
                 </div>
@@ -180,76 +180,46 @@
             <div class="grid grid-cols-12 gap-4 py-20 px-4">
               <div class="col-span-12 md:col-span-6 text-center md:text-left">
                 <ssr-carousel :slides-per-page='1' show-dots loop show-arrows>
-                  <div class="slide">
+                  <div v-for="item in blogs.data" class="slide">
                     <p class="text-3xl md:text-4xl text-white font-bold">
                       Новости
                     </p>
                     <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>
                     <p class="text-2xl md:text-3xl text-white font-bold">
-                      Зависящая от импорта электричества Литва рассчитывает на солидарность соседей
+                      {{getStr(item.attributes.title)}}
                     </p>
                     <p class="text-md md:text-lg my-5 text-white">
-                      Несмотря на тенденцию к замедлению, корейские инвестиции во Вьетнам в ближайшее время увеличатся, включая многие крупномасштабные проекты, до миллиардов долларов США.Проект на миллиард долларов ждетВ рамках Вьетнамско-корейского бизнес-форума, состоявшегося в выходные дни, по случаю визита президента Кореи Юн Сок Ель во Вьетнам был подписан ряд меморандумов о..
+                      {{getStr(item.attributes.description, 250)}}
                     </p>
                     <div class="py-8">
-                      <button type="button" class="bg-transparent px-8 text-white border rounded-lg font-bold text-lg px-5 py-2.5 mr-2 mb-2">
+                      <NuxtLink :to="`/news/${item.id}`" class="bg-transparent px-8 text-white border rounded-lg font-bold text-lg px-5 py-2.5 mr-2 mb-2">
                         Подробнее
-                      </button>
+                      </NuxtLink>
                     </div>
                   </div>
-                  <div class="slide">
-                    <p class="text-3xl md:text-4xl text-white font-bold">
-                      Новости
-                    </p>
-                    <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>
-                    <p class="text-2xl md:text-3xl text-white font-bold">
-                      Зависящая от импорта электричества Литва рассчитывает на солидарность соседей
-                    </p>
-                    <p class="text-md md:text-lg my-5 text-white">
-                      Несмотря на тенденцию к замедлению, корейские инвестиции во Вьетнам в ближайшее время увеличатся, включая многие крупномасштабные проекты, до миллиардов долларов США.Проект на миллиард долларов ждетВ рамках Вьетнамско-корейского бизнес-форума, состоявшегося в выходные дни, по случаю визита президента Кореи Юн Сок Ель во Вьетнам был подписан ряд меморандумов о..
-                    </p>
-                    <div class="py-8">
-                      <button type="button" class="bg-transparent px-8 text-white border rounded-lg font-bold text-lg px-5 py-2.5 mr-2 mb-2">
-                        Подробнее
-                      </button>
-                    </div>
-                  </div>
+
                 </ssr-carousel>
               </div>
               <div class="col-span-12 md:col-span-6 flex items-center md:items-end">
                 <div>
-                  <div class="card my-2 w-full md:w-3/4 md:ml-auto">
+                  <div v-for="item in blogs.data" class="card my-2 min-w-[310px] md:ml-auto">
                     <div
-                      class="flex flex-col rounded-bl rounded-tl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-xl md:flex-row">
-                      <div class="w-full h-auto bg-no-repeat bg-center bg-cover bg-[url('~/assets/images/card_1.png')]">
+                      class="flex flex-col w-full  rounded-bl rounded-tl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-xl md:flex-row">
+                      <div class="w-full h-auto bg-no-repeat bg-center bg-cover" :style="{ 'background-image' : 'url('+ getImageUrlFromBack(item.attributes.images.data[0].attributes.url)+')' }">
                       </div>
                       <div class="flex flex-col justify-start p-6">
                         <h5
                           class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                          От нефти к «зеленой» энергии. Роль Баку в глобальном энергопереходе
+                          {{getStr(item.attributes.title,40)}}
                         </h5>
-                        <a class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                        <NuxtLink :to="`/news/${item.id}`" class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
                           Подробнее >
-                        </a>
+                        </NuxtLink>
                       </div>
                     </div>
+
                   </div>
-                  <div class="card my-2 w-full md:w-3/4 md:ml-auto">
-                    <div
-                      class="flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-xl md:flex-row">
-                      <div class="w-full rounded-bl rounded-tl object-cover h-auto bg-no-repeat bg-center bg-cover bg-[url('~/assets/images/card_1.png')]">
-                      </div>
-                      <div class="flex flex-col justify-start p-6">
-                        <h5
-                          class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                          От нефти к «зеленой» энергии. Роль Баку в глобальном энергопереходе
-                        </h5>
-                        <a class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                          Подробнее >
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -321,72 +291,72 @@
     </section>
     <!-- Fifth Bloc    -->
     <!-- Sixth Bloc    -->
-    <section>
-      <div class="container mx-auto my-[50px] py-[50px] rounded-2xl">
-        <div class="grid grid-cols-12 gap-4">
-          <div class="col-span-12 px-4 md:col-span-12 text-center md:text-left">
-          <ssr-carousel :slides-per-page='1' show-arrows>
+<!--    <section>-->
+<!--      <div class="container mx-auto my-[50px] py-[50px] rounded-2xl">-->
+<!--        <div class="grid grid-cols-12 gap-4">-->
+<!--          <div class="col-span-12 px-4 md:col-span-12 text-center md:text-left">-->
+<!--          <ssr-carousel :slides-per-page='1' show-arrows>-->
 
-              <div class="slide">
-                <div class="flex justify-center chat chat-end">
-                <div class="py-5 blue-gradient-button min-h-[250px] w-full md:w-6/12 rounded-2xl md:flex justify-center items-center px-3 chat-bubble">
-                    <div class="md:w-1/3 text-center">
-                      <div class="mx-auto rounded-full w-[100px] h-[100px] bg-no-repeat bg-center bg-cover bg-[url('~/assets/images/card_1.png')]"></div>
-                      <p class=" text-white text-md text-center font-bold my-2">
-                        Жанар Айманова
-                      </p>
-                      <p class=" text-white text-md text-xs text-center">
-                        Директор
-                      </p>
-                    </div>
-                    <div class="md:w-2/3 text-white items-center flex items-center">
-                      <div>
-                        <p class="text-2xl mb-0">"</p>
-                        <p class="text-md text-white">
-                          Все достижения и успехи
-                          страны – результат каждодневного, кропотливого труда всех казахстанцев.
-                          Мы будем укреплять наши ценности трудолюбия и ответственности
-                        </p>
-                        <p class="text-2xl text-center">"</p><br>
-                      </div>
-                    </div>
+<!--              <div class="slide">-->
+<!--                <div class="flex justify-center chat chat-end">-->
+<!--                <div class="py-5 blue-gradient-button min-h-[250px] w-full md:w-6/12 rounded-2xl md:flex justify-center items-center px-3 chat-bubble">-->
+<!--                    <div class="md:w-1/3 text-center">-->
+<!--                      <div class="mx-auto rounded-full w-[100px] h-[100px] bg-no-repeat bg-center bg-cover bg-[url('~/assets/images/card_1.png')]"></div>-->
+<!--                      <p class=" text-white text-md text-center font-bold my-2">-->
+<!--                        Жанар Айманова-->
+<!--                      </p>-->
+<!--                      <p class=" text-white text-md text-xs text-center">-->
+<!--                        Директор-->
+<!--                      </p>-->
+<!--                    </div>-->
+<!--                    <div class="md:w-2/3 text-white items-center flex items-center">-->
+<!--                      <div>-->
+<!--                        <p class="text-2xl mb-0">"</p>-->
+<!--                        <p class="text-md text-white">-->
+<!--                          Все достижения и успехи-->
+<!--                          страны – результат каждодневного, кропотливого труда всех казахстанцев.-->
+<!--                          Мы будем укреплять наши ценности трудолюбия и ответственности-->
+<!--                        </p>-->
+<!--                        <p class="text-2xl text-center">"</p><br>-->
+<!--                      </div>-->
+<!--                    </div>-->
 
-                </div>
-              </div>
-              </div>
-              <div class="slide">
-                <div class="flex justify-center chat chat-end">
-                <div class="py-5 blue-gradient-button min-h-[250px] w-full md:w-6/12 rounded-2xl md:flex justify-center items-center px-3 chat-bubble">
-                    <div class="md:w-1/3 text-center">
-                      <div class="mx-auto rounded-full w-[100px] h-[100px] bg-no-repeat bg-center bg-cover bg-[url('~/assets/images/card_1.png')]"></div>
-                      <p class=" text-white text-md text-center font-bold my-2">
-                        Жанар Айманова
-                      </p>
-                      <p class=" text-white text-md text-xs text-center">
-                        Директор
-                      </p>
-                    </div>
-                    <div class="md:w-2/3 text-white items-center flex items-center">
-                      <div>
-                        <p class="text-2xl mb-0">"</p>
-                        <p class="text-md text-white">
-                          Все достижения и успехи
-                          страны – результат каждодневного, кропотливого труда всех казахстанцев.
-                          Мы будем укреплять наши ценности трудолюбия и ответственности
-                        </p>
-                        <p class="text-2xl text-center">"</p><br>
-                      </div>
-                    </div>
+<!--                </div>-->
+<!--              </div>-->
+<!--              </div>-->
+<!--              <div class="slide">-->
+<!--                <div class="flex justify-center chat chat-end">-->
+<!--                <div class="py-5 blue-gradient-button min-h-[250px] w-full md:w-6/12 rounded-2xl md:flex justify-center items-center px-3 chat-bubble">-->
+<!--                    <div class="md:w-1/3 text-center">-->
+<!--                      <div class="mx-auto rounded-full w-[100px] h-[100px] bg-no-repeat bg-center bg-cover bg-[url('~/assets/images/card_1.png')]"></div>-->
+<!--                      <p class=" text-white text-md text-center font-bold my-2">-->
+<!--                        Жанар Айманова-->
+<!--                      </p>-->
+<!--                      <p class=" text-white text-md text-xs text-center">-->
+<!--                        Директор-->
+<!--                      </p>-->
+<!--                    </div>-->
+<!--                    <div class="md:w-2/3 text-white items-center flex items-center">-->
+<!--                      <div>-->
+<!--                        <p class="text-2xl mb-0">"</p>-->
+<!--                        <p class="text-md text-white">-->
+<!--                          Все достижения и успехи-->
+<!--                          страны – результат каждодневного, кропотливого труда всех казахстанцев.-->
+<!--                          Мы будем укреплять наши ценности трудолюбия и ответственности-->
+<!--                        </p>-->
+<!--                        <p class="text-2xl text-center">"</p><br>-->
+<!--                      </div>-->
+<!--                    </div>-->
 
-                </div>
-              </div>
-              </div>
+<!--                </div>-->
+<!--              </div>-->
+<!--              </div>-->
 
-          </ssr-carousel>
-          </div>
-        </div>
-      </div>
-    </section>
+<!--          </ssr-carousel>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
     <!-- Sixth Bloc    -->
     <!-- Seventh Bloc    -->
     <section class="custom-gray-bg">
@@ -400,30 +370,33 @@
           </div>
         </div>
         <div class="grid grid-cols-12 gap-4 my-[40px] flex align-items-center">
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <a href="https://ru.airbnb.com/" target="_blank"><img src="~/assets/images/airbnb.png" class="max-h-[30px]"></a>
+          <div v-for="item in associations.data" class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
+            <a :href="item.attributes.website" target="_blank"><img :src="getImageUrlFromBack(item.attributes.image.data.attributes.url)" class="max-h-[70px]"></a>
           </div>
-          <div class="col-span-12 md:col-span-2 px-4 text-center md:text-left flex justify-center items-center my-3">
-            <a href="https://www.tesla.com/" target="_blank"><img  src="~/assets/images/tesla.png" class="max-h-[30px]"></a>
-          </div>
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <a href="https://www.uber.com/nl/nl/" target="_blank"><img src="~/assets/images/uber.png" class="max-h-[30px]"></a>
-          </div>
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <a href="https://www.netflix.com/nl-en/" target="_blank"><img src="~/assets/images/netflix.png" class="max-h-[30px]"></a>
-          </div>
+<!--          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">-->
+<!--            <a href="https://ru.airbnb.com/" target="_blank"><img src="~/assets/images/airbnb.png" class="max-h-[30px]"></a>-->
+<!--          </div>-->
+<!--          <div class="col-span-12 md:col-span-2 px-4 text-center md:text-left flex justify-center items-center my-3">-->
+<!--            <a href="https://www.tesla.com/" target="_blank"><img  src="~/assets/images/tesla.png" class="max-h-[30px]"></a>-->
+<!--          </div>-->
+<!--          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">-->
+<!--            <a href="https://www.uber.com/nl/nl/" target="_blank"><img src="~/assets/images/uber.png" class="max-h-[30px]"></a>-->
+<!--          </div>-->
+<!--          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">-->
+<!--            <a href="https://www.netflix.com/nl-en/" target="_blank"><img src="~/assets/images/netflix.png" class="max-h-[30px]"></a>-->
+<!--          </div>-->
         </div>
-        <div class="grid grid-cols-12 gap-4 my-[40px]">
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <a href="https://slack.com/" target="_blank"><img src="~/assets/images/slack.png" class="max-h-[30px]"></a>
-          </div>
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <a href="https://www.microsoft.com/nl-nl/" target="_blank"><img src="~/assets/images/microsoft.png" class="max-h-[30px]"></a>
-          </div>
-          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">
-            <a href="https://mailchimp.com/" target="_blank"><img src="~/assets/images/mailchimp.png" class="max-h-[30px]"></a>
-          </div>
-        </div>
+<!--        <div class="grid grid-cols-12 gap-4 my-[40px]">-->
+<!--          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">-->
+<!--            <a href="https://slack.com/" target="_blank"><img src="~/assets/images/slack.png" class="max-h-[30px]"></a>-->
+<!--          </div>-->
+<!--          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">-->
+<!--            <a href="https://www.microsoft.com/nl-nl/" target="_blank"><img src="~/assets/images/microsoft.png" class="max-h-[30px]"></a>-->
+<!--          </div>-->
+<!--          <div class="col-span-12 md:col-span-2 px-4  text-center md:text-left flex justify-center items-center my-3">-->
+<!--            <a href="https://mailchimp.com/" target="_blank"><img src="~/assets/images/mailchimp.png" class="max-h-[30px]"></a>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </section>
     <!-- Seventh Bloc    -->
@@ -500,7 +473,9 @@
   </section>
 </template>
 
-<script lang="ts">
+<script>
+import constants from "~/helpers/constants";
+
 export default {
   layout: "front",
   data: () => ({
@@ -521,6 +496,22 @@ export default {
       }
     ],
   }),
+  async asyncData({$axios}) {
+    const associations = await $axios.$get(constants.baseApiUrl + '/associations?populate=*'),
+          blogs = await $axios.$get(constants.baseApiUrl+'/blogs?populate=*&pagination[page]=1&pagination[pageSize]=2&sort[0]=createdAt:desc')
+    return {associations, blogs}
+  },
+  methods: {
+    // getImageUrl(url) {
+    //   return require(`~/assets/images/associations/${url}`)
+    // },
+    getImageUrlFromBack(url) {
+      return constants.baseUrl+url;
+    },
+    getStr(str,length = 100) {
+      return str.length >= length ? str.slice(0,length) + "..." : str;
+    }
+  }
 
 
 }

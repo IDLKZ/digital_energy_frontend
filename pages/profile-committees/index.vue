@@ -3,7 +3,7 @@
     <!-- Section: Design Block -->
     <section class="text-center">
       <h2 class="mb-12 text-3xl font-bold">
-        Профильные <u class="text-primary dark:text-primary-400">комитеты</u>
+        Профильные комитеты<u class="text-primary dark:text-primary-400"></u>
       </h2>
 
       <div class="lg:gap-xl-12 grid gap-x-6 md:grid-cols-3 xl:grid-cols-4">
