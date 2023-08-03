@@ -18,8 +18,9 @@
               </div>
             </NuxtLink>
           </div>
-
-          <h5 class="mb-3 text-lg font-bold text-white">{{blog.attributes.title}}</h5>
+          <NuxtLink :to="`/news/${blog.id}`">
+          <h5 class="mb-3 text-lg font-bold text-black">{{blog.attributes.title}}</h5>
+          </NuxtLink>
           <div class="mb-3 flex items-center justify-center text-sm font-medium text-danger dark:text-danger-500">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                  stroke="currentColor" class="mr-2 h-5 w-5">

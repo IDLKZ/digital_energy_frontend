@@ -7,9 +7,7 @@
         <div class="flex flex-wrap items-center">
           <div class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
             <div class="h-[500px] w-full">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.043029283499!2d71.41447578801457!3d51.08921339880644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ab1a2fc967%3A0x8aac71ee953f313d!2zMTQsINC_0YAt0YIuINCc0LDQvdCz0LjQu9C40Log0JXQuy4gNTUsINCQ0YHRgtCw0L3QsCAwMjAwMDAsINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sus!4v1690730833976!5m2!1sru!2sus"
-                      class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" frameborder="0"
-                      allowfullscreen></iframe>
+              <div style="position:relative;overflow:hidden;"><iframe src="https://yandex.kz/map-widget/v1/?ll=71.419433%2C51.089058&mode=whatshere&whatshere%5Bpoint%5D=71.419434%2C51.089057&whatshere%5Bzoom%5D=17&z=17" width="100%" height="500px" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
             </div>
           </div>
           <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
