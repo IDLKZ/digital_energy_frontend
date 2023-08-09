@@ -10,13 +10,13 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
           <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li><NuxtLink to="/news" class="text-white text-md">Новости</NuxtLink></li>
-            <li><NuxtLink to="/about-us" class="text-white text-md">О Нас</NuxtLink></li>
-            <li><NuxtLink to="/teams" class="text-white text-md">Наша команда</NuxtLink></li>
-            <li><NuxtLink to="/associations" class="text-white text-md">Члены ассоциации</NuxtLink></li>
-            <li><NuxtLink to="/about-consortium" class="text-white text-md">О консорциуме</NuxtLink></li>
-            <li><NuxtLink to="/profile-committees" class="text-white text-md">Профильные комитеты</NuxtLink></li>
-            <li><NuxtLink to="/experts" class="text-white text-md">Эксперты</NuxtLink></li>
+            <li><NuxtLink to="/news" class="dark:text-white text-md">Новости</NuxtLink></li>
+            <li><NuxtLink to="/about-us" class="dark:text-white text-md">О Нас</NuxtLink></li>
+            <li><NuxtLink to="/teams" class="dark:text-white text-md">Наша команда</NuxtLink></li>
+            <li><NuxtLink to="/associations" class="dark:text-white text-md">Члены ассоциации</NuxtLink></li>
+            <li><NuxtLink to="/about-consortium" class="dark:text-white text-md">О консорциуме</NuxtLink></li>
+            <li><NuxtLink to="/profile-committees" class="dark:text-white text-md">Профильные комитеты</NuxtLink></li>
+            <li><NuxtLink to="/experts" class="dark:text-white text-md">Эксперты</NuxtLink></li>
           </ul>
         </div>
         <NuxtLink to="/"><img src="~/assets/images/nav_logo.png" class="w-full md:w-full"></NuxtLink>
@@ -83,5 +83,17 @@ export default {
   }
   .dr-id:hover .dr-content {
     display: block;
+  }
+  .menu li > :not(ul):not(details):active, .menu li > :not(ul):not(details).active, .menu li > details > summary:active {
+    background-color: #F2F2F2!important;
+    color: black!important;
+  }
+  :where(.menu li:not(.menu-title):not(.disabled) > :not(ul):not(details):not(.menu-title)):not(.active):hover, :where(.menu li:not(.menu-title):not(.disabled) > details > summary:not(.menu-title)):not(.active):hover {
+    background-color: #F2F2F2!important;
+    color: black!important;
+  }
+  :where(.menu li:not(.menu-title):not(.disabled) > :not(ul):not(details):not(.menu-title)):not(summary):not(.active).focus, :where(.menu li:not(.menu-title):not(.disabled) > :not(ul):not(details):not(.menu-title)):not(summary):not(.active):focus, :where(.menu li:not(.menu-title):not(.disabled) > details > summary:not(.menu-title)):not(summary):not(.active).focus, :where(.menu li:not(.menu-title):not(.disabled) > details > summary:not(.menu-title)):not(summary):not(.active):focus {
+    background-color: #F2F2F2!important;
+    color: black!important;
   }
 </style>

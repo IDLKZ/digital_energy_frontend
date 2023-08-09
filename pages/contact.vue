@@ -46,7 +46,7 @@
                   </div>
                   <div class="ml-6 grow">
                     <p class="mb-2 font-bold dark:text-white">
-                      Sales questions
+                      По всем вопросам
                     </p>
                     <p class="text-neutral-500 dark:text-neutral-200">
                       +7 717 277-98-04
@@ -66,12 +66,12 @@
                     </div>
                   </div>
                   <div class="ml-6 grow">
-                    <p class="mb-2 font-bold dark:text-white">Address</p>
+                    <p class="mb-2 font-bold dark:text-white">Адрес</p>
                     <p class="text-neutral-500 dark:text-neutral-200">
-                      press@example.com
+                      г.Астана
                     </p>
                     <p class="text-neutral-500 dark:text-neutral-200">
-                      +1 234-567-89
+                      Блок С 2.2, 2этаж, кабинет 220
                     </p>
                   </div>
                 </div>

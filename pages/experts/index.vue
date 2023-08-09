@@ -8,8 +8,9 @@
 
       <div class="lg:gap-xl-12 grid gap-x-6 md:grid-cols-3 xl:grid-cols-4">
         <div v-for="item in experts.data" class="mb-12">
-          <img :src="getImageUrlFromBack(item.attributes.image.data.attributes.url)"
-               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />
+<!--          <img :src="getImageUrlFromBack(item.attributes.image.data.attributes.url)"-->
+<!--               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />-->
+          <div class="bg-img" :style="{ 'background-image' : 'url('+ getImageUrlFromBack(item.attributes.image.data.attributes.url)+')' }"></div>
 
           <NuxtLink :to="`/experts/${item.id}`"><p class="mb-2 font-bold">{{item.attributes.name}}</p></NuxtLink>
         </div>
@@ -37,5 +38,13 @@ export default {
 </script>
 
 <style scoped>
-
+  .bg-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
 </style>

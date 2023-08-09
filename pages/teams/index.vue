@@ -10,7 +10,7 @@
 
         <div class="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
           <div v-for="item in teams.data" class="mb-6 lg:mb-0">
-            <div
+            <div style="margin-bottom: 10px"
               class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
               <div class="relative overflow-hidden bg-cover bg-no-repeat">
                 <div class="bg-img" :style="{ 'background-image' : 'url('+ getImageUrlFromBack(item.attributes.image.data.attributes.url)+')' }"></div>

@@ -1,12 +1,12 @@
 <template>
   <div class="py-[50px]">
-<!--    <section class="custom-dark-bg">-->
-<!--      <div class="container mx-auto py-[20px] md:pt-[100px] mob-pt-80 px-4">-->
-<!--        <div class="text-center text-white">-->
-<!--          <p>Казахстанская Ассоциация Цифровой Энергетики является объединением юридических лиц и некоммерческой организацией, созданной с целью достижения целей технологического развития в сфере Internet of Energy и Industry 4.0, путем цифровой трансформации энергетической отрасли Республики Казахстан.</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
+    <section>
+      <div class="container mx-auto py-[20px] md:pt-[100px] mob-pt-80 px-4">
+        <div class="text-center">
+          <p style="font-size: 24px">Казахстанская Ассоциация Цифровой Энергетики является объединением юридических лиц и некоммерческой организацией, созданной с целью достижения целей технологического развития в сфере Internet of Energy и Industry 4.0, путем цифровой трансформации энергетической отрасли Республики Казахстан.</p>
+        </div>
+      </div>
+    </section>
     <section class="custom-gray-bg">
       <div class="container mx-auto py-[20px] md:pt-[60px] px-4">
         <div class="grid grid-cols-12 gap-4">

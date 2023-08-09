@@ -33,11 +33,11 @@
               <a href="#" class="text-white hover:underline">Контакты</a>
             </li>
             <li class="mb-4">
-              <a href="#" class="text-white hover:underline">Астанинский офис</a>
+              <a href="#" class="text-white hover:underline">г.Астана</a>
             </li>
             <li class="mb-4">
               <a href="#" class="text-white text-md hover:underline font-light">Мангилик Ел, 55/14,</a><br>
-              <a href="#" class="text-white text-md hover:underline font-light">Блок С 2.2</a>
+              <a href="#" class="text-white text-md hover:underline font-light">Блок С 2.2, 2этаж, кабинет 220</a>
             </li>
             <li class="mb-4">
               <a href="tel:+7 717 277-98-01" class="text-white text-md hover:underline font-light">+7 717 277-98-01</a><br>
