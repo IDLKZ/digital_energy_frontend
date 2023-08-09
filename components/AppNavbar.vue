@@ -39,7 +39,7 @@
           <li><NuxtLink to="/contact" class="text-white text-md">Контакты</NuxtLink></li>
         </ul>
         </div>
-        <a class="btn text-white bg-transparent border border-white">Войти</a>
+<!--        <a class="btn text-white bg-transparent border border-white">Войти</a>-->
       </div>
     </div>
     </div>
