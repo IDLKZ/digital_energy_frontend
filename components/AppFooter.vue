@@ -30,10 +30,7 @@
         <div class="col-span-12 px-4 md:col-span-3 text-center md:text-left my-4">
           <ul class="text-gray-500 dark:text-gray-400 font-medium">
             <li class="mb-4">
-              <a href="#" class="text-white hover:underline">Контакты</a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="text-white hover:underline">г.Астана</a>
+              <NuxtLink to="/contact" class="text-white hover:underline">г.Астана</NuxtLink>
             </li>
             <li class="mb-4">
               <a href="#" class="text-white text-md hover:underline font-light">Мангилик Ел, 55/14,</a><br>
@@ -50,21 +47,21 @@
 
         </div>
         <div class="col-span-12 px-4 md:col-span-2 text-center md:text-left my-4">
-          <a
-            href="#"
-            data-te-ripple-init
-            data-te-ripple-color="light"
-            class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
-            style="background-color: #092A44">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4"
-              fill="currentColor"
-              viewBox="0 0 24 24">
-              <path
-                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-              </svg>
-          </a>
+<!--          <a-->
+<!--            href="#"-->
+<!--            data-te-ripple-init-->
+<!--            data-te-ripple-color="light"-->
+<!--            class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"-->
+<!--            style="background-color: #092A44">-->
+<!--            <svg-->
+<!--              xmlns="http://www.w3.org/2000/svg"-->
+<!--              class="h-4 w-4"-->
+<!--              fill="currentColor"-->
+<!--              viewBox="0 0 24 24">-->
+<!--              <path-->
+<!--                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />-->
+<!--              </svg>-->
+<!--          </a>-->
 <!--          <button-->
 <!--            type="button"-->
 <!--            data-te-ripple-init-->

@@ -174,60 +174,60 @@
     <!-- Third Bloc-->
     <!--    Fourth bloc-->
     <section>
-      <div class="container-full py-[50px]">
-        <div class="min-h-[80vh] darken-slide-bg">
-          <div class="container mx-auto">
-            <div class="grid grid-cols-12 gap-4 py-20 px-4">
-              <div class="col-span-12 md:col-span-6 text-center md:text-left">
-                <ssr-carousel :slides-per-page='1' show-dots loop show-arrows>
-                  <div v-for="item in blogs.data" class="slide">
-                    <p class="text-3xl md:text-4xl text-white font-bold">
-                      Новости
-                    </p>
-                    <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>
-                    <p class="text-2xl md:text-3xl text-white font-bold">
-                      {{getStr(item.attributes.title)}}
-                    </p>
-                    <p class="text-md md:text-lg my-5 text-white">
-                      {{getStr(item.attributes.description, 250)}}
-                    </p>
-                    <div class="py-8">
-                      <NuxtLink :to="`/news/${item.id}`" class="bg-transparent px-8 text-white border rounded-lg font-bold text-lg px-5 py-2.5 mr-2 mb-2">
-                        Подробнее
-                      </NuxtLink>
-                    </div>
-                  </div>
+<!--      <div class="container-full py-[50px]">-->
+<!--        <div class="min-h-[80vh] darken-slide-bg">-->
+<!--          <div class="container mx-auto">-->
+<!--            <div class="grid grid-cols-12 gap-4 py-20 px-4">-->
+<!--              <div class="col-span-12 md:col-span-6 text-center md:text-left">-->
+<!--                <ssr-carousel :slides-per-page='1' show-dots loop show-arrows>-->
+<!--                  <div v-for="item in blogs.data" class="slide">-->
+<!--                    <p class="text-3xl md:text-4xl text-white font-bold">-->
+<!--                      Новости-->
+<!--                    </p>-->
+<!--                    <span class="mt-2 mb-4 w-[50px] h-[8px] bg-[#01bcfb] inline-block"></span>-->
+<!--                    <p class="text-2xl md:text-3xl text-white font-bold">-->
+<!--                      {{getStr(item.attributes.title)}}-->
+<!--                    </p>-->
+<!--                    <p class="text-md md:text-lg my-5 text-white">-->
+<!--                      {{getStr(item.attributes.description, 250)}}-->
+<!--                    </p>-->
+<!--                    <div class="py-8">-->
+<!--                      <NuxtLink :to="`/news/${item.id}`" class="bg-transparent px-8 text-white border rounded-lg font-bold text-lg px-5 py-2.5 mr-2 mb-2">-->
+<!--                        Подробнее-->
+<!--                      </NuxtLink>-->
+<!--                    </div>-->
+<!--                  </div>-->
 
-                </ssr-carousel>
-              </div>
-              <div class="col-span-12 md:col-span-6 flex items-center md:items-end">
-                <div>
-                  <div v-for="item in blogs.data" class="card my-2 min-w-[310px] md:ml-auto">
-                    <div
-                      class="flex flex-col w-full  rounded-bl rounded-tl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-xl md:flex-row">
-                      <div class="w-full h-auto bg-no-repeat bg-center bg-cover" :style="{ 'background-image' : 'url('+ getImageUrlFromBack(item.attributes.images.data[0].attributes.url)+')' }">
-                      </div>
-                      <div class="flex flex-col justify-start p-6">
-                        <h5
-                          class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
-                          {{getStr(item.attributes.title,40)}}
-                        </h5>
-                        <NuxtLink :to="`/news/${item.id}`" class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                          Подробнее >
-                        </NuxtLink>
-                      </div>
-                    </div>
+<!--                </ssr-carousel>-->
+<!--              </div>-->
+<!--              <div class="col-span-12 md:col-span-6 flex items-center md:items-end">-->
+<!--                <div>-->
+<!--                  <div v-for="item in blogs.data" class="card my-2 min-w-[310px] md:ml-auto">-->
+<!--                    <div-->
+<!--                      class="flex flex-col w-full  rounded-bl rounded-tl bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-xl md:flex-row">-->
+<!--                      <div class="w-full h-auto bg-no-repeat bg-center bg-cover" :style="{ 'background-image' : 'url('+ getImageUrlFromBack(item.attributes.images.data[0].attributes.url)+')' }">-->
+<!--                      </div>-->
+<!--                      <div class="flex flex-col justify-start p-6">-->
+<!--                        <h5-->
+<!--                          class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">-->
+<!--                          {{getStr(item.attributes.title,40)}}-->
+<!--                        </h5>-->
+<!--                        <NuxtLink :to="`/news/${item.id}`" class="mb-4 text-base text-neutral-600 dark:text-neutral-200">-->
+<!--                          Подробнее >-->
+<!--                        </NuxtLink>-->
+<!--                      </div>-->
+<!--                    </div>-->
 
-                  </div>
+<!--                  </div>-->
 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
 
 
-      </div>
+<!--      </div>-->
     </section>
     <!-- Fourth Bloc-->
 

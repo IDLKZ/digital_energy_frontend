@@ -10,7 +10,7 @@
         <div v-for="item in experts.data" class="mb-12">
 <!--          <img :src="getImageUrlFromBack(item.attributes.image.data.attributes.url)"-->
 <!--               class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt="" style="max-width: 100px" />-->
-          <div class="bg-img" :style="{ 'background-image' : 'url('+ getImageUrlFromBack(item.attributes.image.data.attributes.url)+')' }"></div>
+          <div class="bg-img" :style="{ 'background-image' : 'url('+ getImageUrlFromBack(item.attributes.image.data != null ? item.attributes.image.data.attributes.url : '')+')' }"></div>
 
           <NuxtLink :to="`/experts/${item.id}`"><p class="mb-2 font-bold">{{item.attributes.name}}</p></NuxtLink>
         </div>
@@ -31,7 +31,11 @@ export default {
   },
   methods: {
     getImageUrlFromBack(url) {
-      return constants.baseUrl+url;
+      if (url === '') {
+        return 'https://us.123rf.com/450wm/urfandadashov/urfandadashov1806/urfandadashov180601827/150417827-photo-not-available-vector-icon-isolated-on-transparent-background-photo-not-available-logo-concept.jpg';
+      } else {
+        return constants.baseUrl+url;
+      }
     }
   }
 }
