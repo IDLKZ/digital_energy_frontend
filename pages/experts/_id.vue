@@ -69,5 +69,7 @@ export default {
     height: 300px;
     background-size: contain;
     margin: auto;
+    background-repeat: no-repeat;
+
   }
 </style>
