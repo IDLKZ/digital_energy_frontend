@@ -14,7 +14,7 @@
           <div class="w-full shrink-0 grow-0 basis-auto md:w-8/12">
             <div class="px-6 py-12 md:px-12">
               <h2 class="mb-6 text-3xl font-bold">
-                <span class="text-danger dark:text-danger-500">{{user.data.attributes.name}}</span>
+                <span class="text-black dark:text-danger-500">{{user.data.attributes.name}}</span>
               </h2>
               <p class="mb-6 pb-2">({{user.data.attributes.position}})</p>
               <p class="mb-6 pb-2 text-neutral-500 dark:text-neutral-300">
